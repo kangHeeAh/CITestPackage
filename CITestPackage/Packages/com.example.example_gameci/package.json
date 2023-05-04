@@ -1,0 +1,13 @@
+{
+  "name": "com.example.example_gameci",
+  "version": "1.0.0",
+  "displayName": "Example GameCI",
+  "description": "Example GameCI",
+  "dependencies": {
+    "com.vrmc.vrmshaders": "0.107.2",
+    "com.vrmc.gltf": "0.107.2",
+    "com.vrmc.univrm": "0.107.2",
+    "com.vrmc.vrm": "0.107.2"
+  },
+  "unity": "2017.2"
+}
