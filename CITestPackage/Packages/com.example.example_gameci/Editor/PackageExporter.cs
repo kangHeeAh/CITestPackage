@@ -19,7 +19,14 @@ public static class PackageExporter
     // var version = GetVersion(packageRoot);
     // var fileName = string.IsNullOrEmpty(version) ? "ExampleGameCI.unitypackage" : $"ExampleGameCI.{version}.unitypackage";
     var fileName = "ExampleGameCI.unitypackage";
-    var exportPath = "./package/" + fileName;
+    var exportPath = Path.Combine("ExportPackage", fileName);
+
+    // Ensure export path.
+    var dir = new FileInfo(exportPath).Directory;
+    if (dir != null && !dir.Exists) 
+    {
+      dir.Create();
+    }
 
     var pluginAssets = EnumerateAssets(Path.Combine("Packages", "com.example.example_gameci")); // export all the files
     var sampleAssets = EnumerateAssets(Path.Combine("Assets", "Samples")); // export all the files

@@ -39,5 +39,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Unity Package
-          path: /github/workspace/CITestPackage/package/
+          path: CITestPackage/ExportPackage/
           
